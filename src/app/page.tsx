@@ -83,7 +83,7 @@ export default function Home() {
                 alt=""
                 className="absolute w-20 -left-6 -bottom-6 select-none"
               />
-              <Phone className="w-60" imgSrc="/testimonials/1.jpg" />
+              <Phone className="w-64" imgSrc="/testimonials/1.jpg" />
             </div>
           </div>
         </MaxWidthWrapper>
