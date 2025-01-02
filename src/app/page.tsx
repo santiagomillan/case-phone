@@ -102,6 +102,33 @@ export default function Home() {
               </span>{" "}
               say
             </h2>
+            <img
+              src="/snake-2.png"
+              alt="snake logo"
+              className="w-24 order-0 lg:order-2"
+            />
+          </div>
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16 ">
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="flex gap-0.5 mb-2">
+                <Star className="h-5 w-5 text-green-600 fill-green-500" />
+                <Star className="h-5 w-5 text-green-600 fill-green-500" />
+                <Star className="h-5 w-5 text-green-600 fill-green-500" />
+                <Star className="h-5 w-5 text-green-600 fill-green-500" />
+                <Star className="h-5 w-5 text-green-600 fill-green-500" />
+              </div>
+              <div className="text-lg leading-8">
+                <p>
+                  The case feels durable and I even got a compliment on the
+                  design. Had the case for two and a half months now and{" "}
+                  <span className="p-0.5 bg-slate-800 text-white">
+                    the image is super clear
+                  </span>
+                  , on the case I had before, the image started fading into
+                  yellow-ish color after a couple weeks. Love it.
+                </p>
+              </div>
+            </div>
           </div>
         </MaxWidthWrapper>
       </section>
