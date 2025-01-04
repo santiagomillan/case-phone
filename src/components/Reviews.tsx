@@ -1,5 +1,16 @@
-// "use client";
+"use client";
+import { useRef } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+
+function ReviewGrid() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  return (
+    <div
+      ref={containerRef}
+      className="bg-red-500 relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt20 md:grid-cols-2 lg:grid-cols-3"
+    ></div>
+  );
+}
 
 export function Reviews() {
   return (
@@ -7,8 +18,9 @@ export function Reviews() {
       <img
         aria-hidden="true"
         src="/what-people-are-buying.png"
-        className="absolute select-none hidden xl:block -left-32 top-1/3"
+        className=" absolute select-none hidden xl:block -left-32 top-1/3"
       />
+      <ReviewGrid />
     </MaxWidthWrapper>
   );
 }
