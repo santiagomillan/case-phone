@@ -1,7 +1,9 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { useInView } from "framer-motion";
+import { div } from "framer-motion/client";
+import { cn } from "@/lib/utils";
 
 const PHONES = [
   "/testimonials/1.jpg",
@@ -24,6 +26,42 @@ function splitArray<T>(array: Array<T>, numParts: number) {
   }
 
   return result;
+}
+
+function ReviewColumn({
+  reviews,
+  className,
+  reviewClassName,
+  msPerPixel = 0,
+}: {
+  reviews: string[];
+  className?: string;
+  reviewClassName?: (reviewIndex: number) => string;
+  msPerPixel?: number;
+}) {
+  const columRef = useRef<HTMLDivElement | null>(null);
+  const [columnHeight, setColumnHeight] = useState(0);
+  const duration = `${columnHeight * msPerPixel}ms`;
+
+  useEffect(() => {
+    if (!columRef.current) return;
+    const resizeobserver = new ResizeObserver(() => {
+      setColumnHeight(columRef.current?.offsetHeight ?? 0);
+    });
+    resizeobserver.observe(columRef.current);
+
+    return () => {
+      resizeobserver.disconnect();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={columRef}
+      className={cn("animate-marquee space-y-8 py-4", className)}
+      style={{ "--marquee-duration": duration } as React.CSSProperties}
+    ></div>
+  );
 }
 
 function ReviewGrid() {
