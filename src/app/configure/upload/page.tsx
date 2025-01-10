@@ -15,7 +15,9 @@ const Page = () => {
         }
       )}
     >
-      <div className="relative flex flex-1 flex-col items-center justify-center w-full"></div>
+      <div className="relative flex flex-1 flex-col items-center justify-center w-full">
+        <Dropzone></Dropzone>
+      </div>
     </div>
   );
 };
