@@ -6,6 +6,9 @@ import Dropzone, { FileRejection } from "react-dropzone";
 
 const Page = () => {
   const [isDragOver, setIsDragOver] = useState<boolean>(false);
+  const onDropRejected = () => {};
+  const onDropAccepted = () => {};
+
   return (
     <div
       className={cn(
@@ -16,7 +19,24 @@ const Page = () => {
       )}
     >
       <div className="relative flex flex-1 flex-col items-center justify-center w-full">
-        <Dropzone></Dropzone>
+        <Dropzone
+          onDropRejected={onDropRejected}
+          onDropAccepted={onDropAccepted}
+          accept={{
+            "image/png": [".png"],
+            "image/jpeg": [".jpeg"],
+            "image/jpg": [".jpg"],
+          }}
+          onDragEnter={() => setIsDragOver(true)}
+          onDragLeave={() => setIsDragOver(false)}
+        >
+          {({ getRootProps, getInputProps }) => (
+            <div
+              className="h-full w-full flex-1 flex flex-col items-center justify-center"
+              {...getRootProps()}
+            ></div>
+          )}
+        </Dropzone>
       </div>
     </div>
   );
