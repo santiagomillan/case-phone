@@ -7,7 +7,9 @@ import Dropzone, { FileRejection } from "react-dropzone";
 const Page = () => {
   const [isDragOver, setIsDragOver] = useState<boolean>(false);
   const onDropRejected = () => {};
-  const onDropAccepted = () => {};
+  const onDropAccepted = () => {
+    console.log("Accepted");
+  };
 
   return (
     <div
@@ -34,7 +36,10 @@ const Page = () => {
             <div
               className="h-full w-full flex-1 flex flex-col items-center justify-center"
               {...getRootProps()}
-            ></div>
+            >
+              <input {...getInputProps()} />
+              holi
+            </div>
           )}
         </Dropzone>
       </div>
