@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { Image, Loader2, MousePointerSquareDashed } from "lucide-react";
 import { useState } from "react";
 import Dropzone, { FileRejection } from "react-dropzone";
 
@@ -38,6 +39,13 @@ const Page = () => {
               {...getRootProps()}
             >
               <input {...getInputProps()} />
+              {isDragOver ? (
+                <MousePointerSquareDashed className="h-6 w-6 text-zinc-500 mb-2" />
+              ) : false ? (
+                <Loader2 className="animate-spin h-6 w-6 text-zinc-500 mb-2" />
+              ) : (
+                <Image className="h-6 w-6 text-zinc-500 mb-2" />
+              )}
             </div>
           )}
         </Dropzone>
