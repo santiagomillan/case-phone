@@ -38,7 +38,6 @@ const Page = () => {
               {...getRootProps()}
             >
               <input {...getInputProps()} />
-              holi
             </div>
           )}
         </Dropzone>
