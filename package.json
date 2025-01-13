@@ -23,7 +23,8 @@
     "react-dropzone": "^14.3.5",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "uploadthing": "^7.4.4"
+    "uploadthing": "^7.4.4",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^20",
