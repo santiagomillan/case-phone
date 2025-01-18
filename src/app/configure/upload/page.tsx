@@ -44,7 +44,7 @@ const Page = () => {
     setIsDragOver(false);
   };
 
-  const isUploading = false;
+  //   const isUploading = false;
   const [isPending, startTransition] = useTransition();
 
   return (
