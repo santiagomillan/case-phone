@@ -23,3 +23,5 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## About this proyect
 
 Personalizable Cell Case Creator is a web application designed for users to create and customize their own cell phone cases. With an intuitive interface, users can craft unique cases tailored to their styles and needs
+
+
