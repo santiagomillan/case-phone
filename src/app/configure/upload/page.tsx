@@ -140,7 +140,6 @@ const Page = () => {
       const configId = data.serverData.configId;
       startTransition(() => {
         router.push(`/configure/design?id=${configId}`);
-        //router.push(`/`);
       });
     },
     onUploadProgress(p) {
