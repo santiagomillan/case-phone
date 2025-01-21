@@ -14,3 +14,5 @@ model Configuration {
   imageUrl        String
   croppedImageUrl String?
 }
+
+// dotenv -e .env.local -- npx prisma db push
