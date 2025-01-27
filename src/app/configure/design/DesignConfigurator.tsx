@@ -33,8 +33,16 @@ const DesignConfigurator = ({
           <div
             className={cn(
               "absolute inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px]",
-              `bg-red-600`
+              `bg-zinc-600`
             )}
+          />
+        </div>
+        <div className="relative w-full h-full">
+          <NextImage
+            src={imageUrl}
+            fill
+            alt="your img"
+            className="pointer-events-none"
           />
         </div>
       </div>
