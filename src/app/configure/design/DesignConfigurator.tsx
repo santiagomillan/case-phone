@@ -2,6 +2,7 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
 import NextImage from "next/image";
+import { Rnd } from "react-rnd";
 
 interface DesignConfiguratorProps {
   configId: string;
@@ -37,14 +38,23 @@ const DesignConfigurator = ({
             )}
           />
         </div>
-        <div className="relative w-full h-full">
-          <NextImage
-            src={imageUrl}
-            fill
-            alt="your img"
-            className="pointer-events-none"
-          />
-        </div>
+        <Rnd
+          default={{
+            x: 150,
+            y: 205,
+            height: imageDimensions.height / 4,
+            width: imageDimensions.width / 4,
+          }}
+        >
+          <div className="relative w-full h-full">
+            <NextImage
+              src={imageUrl}
+              fill
+              alt="your img"
+              className="pointer-events-none"
+            />
+          </div>
+        </Rnd>
       </div>
     </div>
   );
