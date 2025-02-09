@@ -43,7 +43,7 @@ const DesignConfigurator = ({
           <div
             className={cn(
               "absolute inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px]",
-              `bg-zinc-600`
+              `bg-${options.color.tw}`
             )}
           />
         </div>
